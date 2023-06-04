@@ -1,3 +1,9 @@
 <div class="main-page">
     <h1>Lamb Family Recipe Book</h1>
+    <ul>
+        <li *ngFor="let meal of mealsList" [id]="meal.id" routerLink="/recipe/{{meal.id}}">
+            <img width="30%" src={{meal.picture}} alt="">
+            <h3>{{meal.name}}</h3>
+        </li>
+    </ul>
 </div>

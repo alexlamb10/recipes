@@ -10,10 +10,10 @@ app.use(cors());
 app.use("/", express.static(path.join(__dirname, "../public")));
 const port = 3000;
 
-let { getList, getTodoById } = require("./controller");
+let { getList, getRecipeById } = require("./controller");
 
 app.get("/", getList);
-app.get("/getTodoById/:id", getTodoById);
+app.get("/getRecipeById/:id", getRecipeById);
 
 
 app.listen(port, () => {
