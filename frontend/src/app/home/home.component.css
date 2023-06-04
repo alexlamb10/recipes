@@ -4,3 +4,22 @@
     flex-direction: column;
     align-items: center;
 }
+
+.meal_list{
+    list-style: none;
+}
+
+.meal{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1vh;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.meal h3{
+    width: 60%;
+}
+.meal_pic{
+    display: inline-block;
+}

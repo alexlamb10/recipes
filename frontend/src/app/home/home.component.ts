@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class HomeComponent implements OnInit{
   @Input() mealsList: any[] = []
-  // mealsList$: BehaviorSubject<any> = new BehaviorSubject<any>([])
+
   
   constructor(private _route: ActivatedRoute, private _meals: GetRecipesService) { }
 
