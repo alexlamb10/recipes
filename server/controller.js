@@ -32,40 +32,6 @@ let list = [
     getList: (req, res) => {
       res.status(200).send(list);
     },
-    addTodo: (req, res) => {
-      let { todo } = req.body;
-      const item = {
-        id: addedId,
-        task: todo,
-        complete: false,
-      };
-      addedId = addedId + 1;
-      list.push(item);
-      res.status(200).send(list);
-    },
-    markComplete: (req, res) => {
-      let { id } = req.params;
-  
-      let index = list.findIndex((x) => {
-        return x.id == id;
-      });
-      if (list[index].complete === true) {
-        list[index].complete = false;
-      } else if (list[index].complete === false) {
-        list[index].complete = true;
-      }
-  
-      res.status(200).send(list);
-    },
-    deleteTask: (req, res) => {
-      let { id } = req.params;
-      let index = list.findIndex((x) => {
-        return x.id == id;
-      });
-  
-      list.splice(index, 1);
-      res.status(200).send(list);
-    },
     getTodoById: (req, res) => {
       let { id } = req.params;
   
@@ -74,17 +40,6 @@ let list = [
       });
   
       item = list[index];
-      res.status(200).send(item);
-    },
-    updateItem: (req, res) => {
-      let { id } = req.params;
-      let { newItem } = req.body;
-  
-      let index = list.findIndex((x) => {
-        return x.id == id;
-      });
-      
-      list[index].task = newItem;
       res.status(200).send(item);
     },
   };
