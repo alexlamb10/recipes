@@ -1,15 +1,18 @@
 <h5 class="back" routerLink="/">Lamb Family Recipe Book</h5>
-<img width="50%" [src]="meal$.value.picture" alt="">
 
-<ul>
-    <li *ngFor="let ingredient of meal$.value.ingredientList">{{ingredient}}</li>
-</ul>
-<ol>
-    <li *ngFor="let instructionList of meal$.value.instructions"> 
-        <ul>
-            <li *ngFor="let instruction of instructionList">
-                {{instruction}}
-            </li>
-        </ul>
-    </li>
-</ol>
+<div class="one_meal">
+    <img class="picture" [src]="meal$.value.picture" alt="">
+    
+    <ul class="ingredients">
+        <li *ngFor="let ingredient of meal$.value.ingredientList">{{ingredient}}</li>
+    </ul>
+    <ol class="instructions">
+        <li *ngFor="let instructionList of meal$.value.instructions">
+            <ul>
+                <li *ngFor="let instruction of instructionList">
+                    {{instruction}}
+                </li>
+            </ul>
+        </li>
+    </ol>
+</div>

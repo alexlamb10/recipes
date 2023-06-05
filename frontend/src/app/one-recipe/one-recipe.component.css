@@ -1,3 +1,28 @@
 .back{
     cursor: pointer;
 }
+
+.one_meal{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ingredients{
+    width: 50%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.instructions{
+    width: 70%;
+}
+
+.picture{
+    width: 50%;
+    height: 60vh;
+}
